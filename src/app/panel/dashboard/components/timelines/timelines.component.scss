@@ -1,0 +1,41 @@
+/* timelines.component.scss */
+
+ ::ng-deep {
+  .calendar-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: -15px;
+    border: 1px solid gray;
+  }
+
+
+
+  .fc-daygrid-event {
+    background-color: #ffc107;
+    border: 1px solid #e0a800;
+    color: #212529;
+  }
+
+  .fc-daygrid-event-dot {
+   background-color: aqua;
+  }
+
+  .fc .fc-col-header-cell-cushion {
+    font-size: 12px !important;
+  }
+
+}
+
+/* Add any other component-specific styles here */
+.timeline {
+  background-color: #fff;
+  box-shadow: 0px 7px 13px -3px #b4bfd8;
+  padding: 16px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin-bottom: 16px;
+  height: 400px;
+  overflow: auto;
+}
+

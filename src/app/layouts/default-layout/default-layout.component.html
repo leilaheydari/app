@@ -1,0 +1,16 @@
+<!-- <div class="container" [ngClass]="{'light-theme': (themeMode$ | async) === 'light', 'dark-theme': (themeMode$ | async) === 'dark' }"> -->
+
+<!-- </div> -->
+
+
+
+<div class="container">
+  <app-navigation></app-navigation>
+  <main class="main">
+    <app-header></app-header>
+    <div class="main-body">
+    <div class="layout">  <router-outlet></router-outlet></div>
+    <div class="footer"><app-footer></app-footer></div>
+    </div>
+  </main>
+</div>

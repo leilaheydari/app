@@ -1,0 +1,17 @@
+.light-theme {
+  --layout-defult1-background: lightseagreen;
+  --layout-defult2-background: #f4f6ff;
+  --block-background: #ffffff;
+  --block-border: #7a7a7a;
+  --btn-defult-background: linear-gradient(#b3803f, #664821);
+  --secondary-color : red
+}
+
+.dark-theme {
+  --layout-defult1-background: #111;
+  --layout-defult2-background: #222;
+  --block-background: #333;
+  --block-border: #444;
+  --btn-defult-background: linear-gradient(#666, #555);
+  --secondary-color: green
+}

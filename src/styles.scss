@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+// @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap');
+// @import '@fortawesome/fontawesome-free/css/all.css';
+
+
+@import url('./assets/scss/Vazir-Font.scss');
+// @import url('./assets/scss/Awesome5Pro.scss');
+// @import url('./assets/scss/Boxicons-Font.scss');
+// @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Vazirmatn';
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif, 'Vazirmatn';
+  color: rgb(36, 71, 71);
+  direction: rtl;
+  text-align: right;
+}
+
+// ul {
+//   list-style: none;
+// }
+
+// a {
+//   text-decoration: none;
+//   cursor: pointer;
+// }
+
+// button{
+//   cursor: pointer;
+// }
+
+// .fa-font {
+//   font-family:  'Vazirmatn';
+// }
+
+// .en-font {
+//   font-family: 'Roboto';
+// }
+
+
+
+
+
+
+

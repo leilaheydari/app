@@ -1,0 +1,133 @@
+<!-- نمایش دکمه با استفاده از مقادیر ورودی -->
+<button [ngStyle]="{
+    'background': buttonForm.get('background')?.value,
+    'color': buttonForm.get('color')?.value,
+    'border-radius': buttonForm.get('borderRadius')?.value + 'px',
+    'border-color': buttonForm.get('borderColor')?.value,
+    'border-width': buttonForm.get('borderWidth')?.value + 'px' ,
+    'border-style': buttonForm.get('borderStyle')?.value || 'solid',
+    'font-size': buttonForm.get('fontSize')?.value + 'px',
+    'font-weight': buttonForm.get('fontWeight')?.value ,
+    'font-family': buttonForm.get('fontFamily')?.value ,
+    'line-height': buttonForm.get('lineHeight')?.value ,
+    'letter-spacing': buttonForm.get('letterSpacing')?.value + 'px',
+    'padding-top': buttonForm.get('paddingTop')?.value + 'px',
+    'padding-bottom': buttonForm.get('paddingBottom')?.value + 'px',
+    'padding-left': buttonForm.get('paddingLeft')?.value + 'px',
+    'padding-right': buttonForm.get('paddingRight')?.value + 'px',
+    'margin-top': buttonForm.get('marginTop')?.value + 'px',
+    'margin-bottom': buttonForm.get('marginBottom')?.value + 'px',
+    'margin-left': buttonForm.get('marginLeft')?.value + 'px',
+    'margin-right': buttonForm.get('marginRight')?.value + 'px',
+    }">
+  <i *ngIf="buttonForm.get('iconLtr')?.value" class="fas fa-chevron-left"></i>
+  {{ buttonForm.get('label')?.value }}
+  <i *ngIf="buttonForm.get('iconRtl')?.value" class="fas fa-chevron-right"></i>
+</button>
+
+
+
+<form class="box-col" [formGroup]="buttonForm" (ngSubmit)="onSubmit()">
+  <!-- رنگ زمینه -->
+  <input (colorPickerChange)="onColorChange($event , 'background')" type="text" colorPicker [(colorPicker)]="colorBg" />
+  <div class="box-bg">
+    <span>بکگراند</span>
+    <input class="bg" [style.background]="colorBg">
+    <span>{{ colorBg }}</span>
+  </div>
+
+  <!-- متن دکمه -->
+  <input formControlName="label" type="text" placeholder="Button Text">
+  <input formControlName="label" type="text" placeholder="Button Text">
+
+
+  <!-- رنگ لیبل -->
+  <button (colorPickerChange)="onColorChange($event , 'color')" type="button" class="btn" colorPicker
+    [(colorPicker)]="colorLabel">انتخاب رنگ لیبل</button>
+  <div class="box-bg">
+    <span>لیبل</span>
+    <input class="bg" [style.background]="colorLabel">
+    <span>{{ colorLabel }}</span>
+  </div>
+
+  <!-- رنگ بوردر -->
+  <button (colorPickerChange)="onColorChange($event , 'borderColor')" type="button" class="btn" colorPicker
+    [(colorPicker)]="colorBorder">انتخاب رنگ بوردر</button>
+  <div class="box-bg">
+    <span>رنگ بوردر</span>
+    <input class="bg" [style.background]="colorBorder">
+    <span>{{ colorBorder }}</span>
+  </div>
+
+  <div>
+    <label>عرض حاشیه:</label>
+    <input formControlName="borderWidth" type="text" placeholder="عرض حاشیه">
+
+    <!-- Select برای border-style -->
+    <label>نوع حاشیه:</label>
+    <select formControlName="borderStyle">
+      <option value="solid">Solid</option>
+      <option value="dashed">Dashed</option>
+      <option value="dotted">Dotted</option>
+      <!-- انواع حاشیه‌های دیگر را نیز می‌توانید اضافه کنید -->
+    </select>
+
+    <!-- شعاع گوشه‌ها -->
+    <input formControlName="borderRadius" type="text" placeholder="border radius">
+  </div>
+
+
+  <!--فونت-->
+  <div>
+    <label>font:</label>
+    <input formControlName="fontSize" type="text" placeholder="font Size">
+    <input formControlName="fontWeight" type="text" placeholder="font weight">
+    <select formControlName="fontFamily">
+      <option value="Arial">Arial</option>
+      <option value="Times New Roman">Times New Roman</option>
+      <option value="Verdana">Verdana</option>
+    </select>
+    <input formControlName="lineHeight" type="text" placeholder="line height">
+    <input formControlName="letterSpacing" type="text" placeholder="letter spacing">
+  </div>
+
+
+
+  <!-- مارجین و پدینگ -->
+  <div>
+    <label>Padding:</label>
+    <input formControlName="paddingTop" type="text" placeholder="Top">
+    <input formControlName="paddingBottom" type="text" placeholder="Bottom">
+    <input formControlName="paddingLeft" type="text" placeholder="Left">
+    <input formControlName="paddingRight" type="text" placeholder="Right">
+  </div>
+
+  <div>
+    <label>Margin:</label>
+    <input formControlName="marginTop" type="text" placeholder="Top">
+    <input formControlName="marginBottom" type="text" placeholder="Bottom">
+    <input formControlName="marginLeft" type="text" placeholder="Left">
+    <input formControlName="marginRight" type="text" placeholder="Right">
+  </div>
+
+  <!--ایکن-->
+  <div>
+    <label>
+      <input formControlName="iconLtr" type="radio" [value]="true">
+      icon Ltr: True
+      <input formControlName="iconLtr" type="radio" [value]="false">
+      icon Ltr: False
+    </label>
+    <label>
+      <input formControlName="iconRtl" type="radio" [value]="true">
+      icon Rtl: True
+      <input formControlName="iconRtl" type="radio" [value]="false">
+      icon Rtl: False
+    </label>
+  </div>
+
+  <!-- دکمه ثبت -->
+  <button type="submit" class="btn">ثبت</button>
+
+
+</form>

@@ -1,0 +1,38 @@
+.btn {
+  background-color: transparent;
+  border: 1px solid gray;
+  padding: 10px 5px;
+  border-radius: 10px;
+  width: 200px;
+}
+
+input{
+  background-color: transparent;
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 6px;
+  width: 200px;
+}
+
+.box-col{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.box-bg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+
+
+}
+.bg{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid gray;
+}
